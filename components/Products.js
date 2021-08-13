@@ -4,6 +4,7 @@ import { HiStar } from "react-icons/hi"
 import { useDispatch } from "react-redux"
 import { addToBasket } from "../slices/basketSlices"
 import { useRouter } from 'next/router'
+import prime from "../static/prime.png"
 
 const MAX = 5
 const MIN  = 1
@@ -54,7 +55,7 @@ const Products = ({id, title, price, description, category, image}) => {
             </div>
             {hasPrime && (
                 <div className="flex items-center space-x-2 -mt-5">
-                    <img className="w-12 pt-1" src="../static/prime.png" alt="" />
+                    <Image width ={52} height = {10} loading="lazy" className="w-12 pt-1" src={prime} alt="" />
                     <p className="m-0 text-xs text-gray-600">Free One-day Delivery</p>
                 </div>
             )}

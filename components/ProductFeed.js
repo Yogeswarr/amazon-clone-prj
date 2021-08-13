@@ -1,4 +1,6 @@
 import Products from "./Products"
+import ad1 from "../static/ad1.png"
+import Image from "next/image"
 
 const ProductFeed = ({ products }) => {
     return (
@@ -14,7 +16,9 @@ const ProductFeed = ({ products }) => {
                     image = {image}
                 />
             ))}
-            <img src="../static/ad1.png" alt="" className="md:col-span-full w-full" />
+            <div  className="md:col-span-full">
+                <Image loading = "lazy" src={ad1} width = {1500} objectFit = "contain" height = {300} alt="" />
+            </div>
             <div className="md:col-span-2">
                 {products.slice(4,5).map(({id, title, price, description, category, image}) => (
                     <Products 

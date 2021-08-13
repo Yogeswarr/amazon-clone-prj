@@ -28,7 +28,7 @@ export const getStaticProps = async (context) => {
     }
 }
 
-const productPage = ({ data }) => {
+const ProductPage = ({ data }) => {
     const dispatch = useDispatch()
     const price1 = data.price * 75
     const {id, title, price, description, category, image} = data
@@ -69,4 +69,4 @@ const productPage = ({ data }) => {
     )
 }
 
-export default productPage
+export default ProductPage

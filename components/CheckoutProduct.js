@@ -2,6 +2,7 @@ import Image from "next/image"
 import { HiStar } from "react-icons/hi"
 import { useDispatch } from "react-redux"
 import { addToBasket, removeFromBasket } from "../slices/basketSlices"
+import prime from "../static/prime.png"
 
 const CheckoutProduct = ({ id, title, price, rating, description, category, image, hasPrime }) => {
     const dispatch = useDispatch()
@@ -43,7 +44,7 @@ const CheckoutProduct = ({ id, title, price, rating, description, category, imag
 
                 {hasPrime && (
                     <div className="flex items-center space-x-2">
-                        <img loading="lazy" className="w-12 pt-1" src="../static/prime.png" alt="" />
+                        <Image width ={52} height = {10} loading="lazy" className="w-12 pt-1" src={prime} alt="" />
                         <p className="m-0 text-xs text-gray-600">Free One-day Delivery</p>
                     </div>
                 )}
